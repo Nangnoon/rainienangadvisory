@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet Rainie Nang - Your trusted financial advisor in Singapore helping expats and residents with financial planning, insurance, and investment solutions.">
+  <title>About Rainie Nang | Financial Advisory Singapore</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#4A8DB7',
+            'primary-dark': '#3A7299',
+            'primary-light': '#E8F4F8',
+            'accent': '#D4A853',
+            'accent-dark': '#B8923F',
+            'accent-light': '#FDF8EC',
+            'navy': '#1E3A5F',
+            'slate': '#64748B',
+            'off-white': '#FAFBFC',
+          },
+          fontFamily: {
+            'display': ['DM Serif Display', 'Georgia', 'serif'],
+            'sans': ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    html { scroll-behavior: smooth; }
+    .nav-item { position: relative; }
+    .nav-dropdown { position: absolute; top: 100%; left: -1rem; background: white; min-width: 240px; box-shadow: 0 20px 50px rgba(30, 58, 95, 0.15); border-radius: 12px; padding: 0.5rem; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 100; }
+    .nav-item:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-dropdown a { display: block; padding: 0.75rem 1rem; color: #1E3A5F; font-size: 0.875rem; border-radius: 8px; transition: all 0.2s; }
+    .nav-dropdown a:hover { background: #E8F4F8; color: #4A8DB7; }
+    .mobile-nav { position: fixed; inset: 0; background: white; z-index: 9999; padding: 1.5rem; transform: translateX(100%); transition: transform 0.3s ease; overflow-y: auto; }
+    .mobile-nav.active { transform: translateX(0); }
+    .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .gold-line { width: 60px; height: 3px; background: linear-gradient(90deg, #D4A853, #B8923F); border-radius: 2px; }
+    .whatsapp-btn { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); z-index: 100; transition: all 0.3s ease; }
+    .whatsapp-btn:hover { transform: scale(1.1); }
+  </style>
+</head>
+<body class="font-sans bg-off-white text-navy">
+  
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-lg z-50 border-b border-gray-100/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center shadow-lg shadow-primary/20">
+            <span class="text-white font-display text-xl">R</span>
+          </div>
+          <div class="hidden sm:block">
+            <span class="font-display text-xl text-navy">Rainie Nang</span>
+            <span class="block text-xs text-slate -mt-0.5">Financial Advisory</span>
+          </div>
+        </a>
+        
+        <div class="hidden lg:flex items-center gap-1">
+          <div class="nav-item px-4 py-2">
+            <button class="flex items-center gap-1.5 text-navy font-medium text-sm hover:text-primary transition-colors">
+              Services <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="nav-dropdown">
+              <a href="services.html#financial-planning">💰 Financial Planning</a>
+              <a href="services.html#insurance">🛡️ Insurance Solutions</a>
+              <a href="services.html#investment">📈 Investment</a>
+              <a href="services.html#education">🎓 Education Planning</a>
+              <a href="business.html">🏢 Business Solutions</a>
+            </div>
+          </div>
+          
+          <div class="nav-item px-4 py-2">
+            <button class="flex items-center gap-1.5 text-navy font-medium text-sm hover:text-primary transition-colors">
+              For Expats <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="nav-dropdown">
+              <a href="services.html#pr-application">🇸🇬 PR Application</a>
+              <a href="expats.html">📋 Expat Guide</a>
+              <a href="services.html#home-insurance">🏠 Home Insurance</a>
+              <a href="services.html#specialty">👨‍👩‍👧 Helper Insurance</a>
+            </div>
+          </div>
+          
+          <div class="nav-item px-4 py-2">
+            <button class="flex items-center gap-1.5 text-navy font-medium text-sm hover:text-primary transition-colors">
+              For Business <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="nav-dropdown">
+              <a href="business.html#employee-benefits">👥 Employee Benefits</a>
+              <a href="business.html#keyman-insurance">⭐ Key Man Insurance</a>
+              <a href="business.html#group-insurance">🏥 Group Insurance</a>
+              <a href="business.html#business-protection">🔒 Business Protection</a>
+            </div>
+          </div>
+          
+          <a href="about.html" class="px-4 py-2 text-primary font-medium text-sm">About</a>
+          <a href="contact.html" class="ml-4 px-5 py-2.5 bg-gradient-to-r from-accent to-accent-dark text-white font-semibold text-sm rounded-full hover:shadow-lg hover:shadow-accent/30 transition-all">Free Consultation</a>
+        </div>
+        
+        <button class="lg:hidden p-2 -mr-2" onclick="document.getElementById('mobile-nav').classList.add('active')">
+          <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Mobile Navigation -->
+  <div id="mobile-nav" class="mobile-nav">
+    <div class="flex justify-between items-center mb-8">
+      <span class="font-display text-xl text-navy">Rainie Nang</span>
+      <button class="p-2 -mr-2" onclick="document.getElementById('mobile-nav').classList.remove('active')">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="space-y-2">
+      <a href="services.html" class="block py-3 px-4 text-navy font-medium rounded-lg hover:bg-primary-light">Services</a>
+      <a href="expats.html" class="block py-3 px-4 text-navy font-medium rounded-lg hover:bg-primary-light">For Expats</a>
+      <a href="business.html" class="block py-3 px-4 text-navy font-medium rounded-lg hover:bg-primary-light">For Business</a>
+      <a href="about.html" class="block py-3 px-4 text-primary font-medium rounded-lg bg-primary-light">About</a>
+      <a href="contact.html" class="block py-3 px-4 text-navy font-medium rounded-lg hover:bg-primary-light">Contact</a>
+      <a href="https://wa.me/6588355961" class="block mt-4 py-3 px-4 bg-gradient-to-r from-accent to-accent-dark text-white font-semibold text-center rounded-lg">WhatsApp Me</a>
+    </div>
+  </div>
+  
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-gradient-to-br from-primary-light via-off-white to-accent-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="fade-up">
+          <div class="gold-line mb-6"></div>
+          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-navy leading-tight mb-6">
+            Hello, I'm<br>
+            <span class="text-primary">Rainie Nang</span>
+          </h1>
+          <p class="text-slate text-lg mb-8 leading-relaxed">
+            I'm a licensed Financial Advisory Representative based in Singapore, helping individuals, families, and businesses navigate their financial journey with confidence.
+          </p>
+          <p class="text-slate text-lg mb-8 leading-relaxed">
+            Since 2020, I've had the privilege of serving over 500 clients — from new expats finding their footing in Singapore to established business owners protecting their enterprises.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-primary to-primary-dark text-white font-semibold rounded-xl hover:shadow-xl hover:shadow-primary/25 transition-all">
+              Let's Talk
+            </a>
+            <a href="https://wa.me/6588355961" class="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-navy font-semibold rounded-xl border-2 border-gray-200 hover:border-primary hover:text-primary transition-all">
+              WhatsApp Me
+            </a>
+          </div>
+        </div>
+        
+        <div class="fade-up">
+          <div class="relative">
+            <div class="w-full bg-white rounded-3xl shadow-2xl shadow-primary/10 overflow-hidden">
+              <img src="images/Rainie.JPG" alt="Rainie Nang - Financial Advisor" class="w-full h-auto object-cover">
+            </div>
+            <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl">
+              <p class="font-display text-4xl text-accent">5+</p>
+              <p class="text-slate text-sm">Years Experience</p>
+            </div>
+            <div class="absolute -top-6 -left-6 bg-accent-light rounded-2xl p-4 shadow-lg">
+              <p class="font-display text-2xl text-accent">500+</p>
+              <p class="text-slate text-xs">Happy Clients</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- My Story -->
+  <section class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 fade-up">
+      <div class="text-center mb-12">
+        <div class="gold-line mx-auto mb-6"></div>
+        <h2 class="font-display text-3xl md:text-4xl text-navy">Why I Became a Financial Advisor</h2>
+      </div>
+      
+      <div class="prose prose-lg text-slate max-w-none space-y-6">
+        <p>
+          My journey into financial advisory began with a simple realization: many people, especially expats arriving in Singapore, feel overwhelmed by the complexity of financial decisions they need to make.
+        </p>
+        <p>
+          From choosing the right insurance to understanding CPF contributions, from PR applications to investment options — the financial landscape can be daunting. I wanted to be the guide I wished I had when I first started navigating these waters.
+        </p>
+        <p>
+          Today, I specialize in making financial planning simple and accessible. My approach is always client-first: I listen, understand your unique situation, and then craft solutions that truly fit your needs — not the other way around.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Values -->
+  <section class="py-24 bg-off-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-up">
+        <div class="gold-line mx-auto mb-6"></div>
+        <h2 class="font-display text-3xl md:text-4xl text-navy">What I Believe In</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center fade-up">
+          <div class="w-16 h-16 bg-primary-light rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-navy mb-3">Integrity</h3>
+          <p class="text-slate text-sm">Honest, transparent advice that puts your interests first.</p>
+        </div>
+        
+        <div class="text-center fade-up">
+          <div class="w-16 h-16 bg-accent-light rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-navy mb-3">Client-Centric</h3>
+          <p class="text-slate text-sm">Every recommendation tailored to your unique situation.</p>
+        </div>
+        
+        <div class="text-center fade-up">
+          <div class="w-16 h-16 bg-primary-light rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-navy mb-3">Expertise</h3>
+          <p class="text-slate text-sm">Continuous learning to provide the best solutions.</p>
+        </div>
+        
+        <div class="text-center fade-up">
+          <div class="w-16 h-16 bg-accent-light rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-navy mb-3">Reliability</h3>
+          <p class="text-slate text-sm">Here for you today, tomorrow, and for years to come.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Stats -->
+  <section class="py-24 bg-gradient-to-br from-navy via-primary-dark to-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div class="fade-up">
+          <p class="font-display text-5xl text-white mb-2">500+</p>
+          <p class="text-white/60 text-sm tracking-wider">CLIENTS SERVED</p>
+        </div>
+        <div class="fade-up">
+          <p class="font-display text-5xl text-accent mb-2">5+</p>
+          <p class="text-white/60 text-sm tracking-wider">YEARS EXPERIENCE</p>
+        </div>
+        <div class="fade-up">
+          <p class="font-display text-5xl text-white mb-2">15+</p>
+          <p class="text-white/60 text-sm tracking-wider">SERVICE AREAS</p>
+        </div>
+        <div class="fade-up">
+          <p class="font-display text-5xl text-accent mb-2">98%</p>
+          <p class="text-white/60 text-sm tracking-wider">SATISFACTION</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA -->
+  <section class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-up">
+      <div class="gold-line mx-auto mb-6"></div>
+      <h2 class="font-display text-3xl md:text-4xl text-navy mb-6">Ready to Work Together?</h2>
+      <p class="text-slate text-lg mb-10">Let's discuss your financial goals and how I can help you achieve them.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-primary-dark text-white font-semibold rounded-xl hover:shadow-xl hover:shadow-primary/25 transition-all">Book a Consultation</a>
+        <a href="https://wa.me/6588355961" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition-all">WhatsApp Me</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="bg-navy text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center">
+              <span class="text-white font-display text-lg">R</span>
+            </div>
+            <span class="font-display text-xl">Rainie Nang</span>
+          </div>
+          <p class="text-white/60 text-sm">Comprehensive financial planning and insurance solutions for expats and residents in Singapore.</p>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-4 text-accent">Services</h4>
+          <ul class="space-y-2 text-white/60 text-sm">
+            <li><a href="services.html#financial-planning" class="hover:text-white transition-colors">Financial Planning</a></li>
+            <li><a href="services.html#insurance" class="hover:text-white transition-colors">Insurance</a></li>
+            <li><a href="services.html#investment" class="hover:text-white transition-colors">Investment</a></li>
+            <li><a href="services.html#pr-application" class="hover:text-white transition-colors">PR Application</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-4 text-accent">Quick Links</h4>
+          <ul class="space-y-2 text-white/60 text-sm">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="expats.html" class="hover:text-white transition-colors">For Expats</a></li>
+            <li><a href="business.html" class="hover:text-white transition-colors">For Business</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-4 text-accent">Contact</h4>
+          <ul class="space-y-3 text-white/60 text-sm">
+            <li><a href="https://wa.me/6588355961" class="hover:text-white transition-colors flex items-center gap-2"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>+65 8835 5961</a></li>
+            <li><a href="mailto:rainie.nang@sg-alliance.com" class="hover:text-white transition-colors flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>Email Me</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-white/10 pt-8 text-center text-white/40 text-sm">
+        <p>© 2024 Rainie Nang Financial Advisory. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <a href="https://wa.me/6588355961" target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
